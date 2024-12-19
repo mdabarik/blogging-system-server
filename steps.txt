@@ -1,0 +1,25 @@
+
+
+
+-------------.
+| User Model:|
+-------------.
+name: string
+email: string
+password: string
+role: 'admin' | 'user'
+isBlocked: boolean
+createdAt: Date
+updatedAt: Date
+
+--------.
+| Blog  |
+--------.
+tile: string
+content: string
+author: ObjectId
+isPublished: boolean
+cratedAt: Date
+updatedAt: Date
+
+

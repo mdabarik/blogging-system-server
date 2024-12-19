@@ -3,7 +3,7 @@ import express, { Application, Request, Response } from 'express';
 
 const app: Application = express();
 
-//parsers
+// parsers
 app.use(express.json());
 app.use(cors());
 
