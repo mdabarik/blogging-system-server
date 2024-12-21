@@ -51,4 +51,8 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
+userSchema.statics.isUserExistsByCustomId = async function (id: string) {
+  return await User.findOne({ id }).select('+password');
+};
+
 export const User = model<TUser>('User', userSchema);

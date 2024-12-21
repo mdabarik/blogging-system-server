@@ -26,3 +26,6 @@ updatedAt: Date
 21 Dec 2024
 -----------
 1. add password hashing in the database using mongoose pre hook
+2. login with jwt, refresh token
+    -- create auth module
+        -- 
