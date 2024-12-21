@@ -5,7 +5,8 @@ import httpStatus from 'http-status';
 
 const createUser = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { userData } = req.body;
+    const userData = req.body;
+    console.log(req.body);
     const result = await userService.userRegistration(userData);
     sendResponse(res, {
       statusCode: httpStatus.OK,
