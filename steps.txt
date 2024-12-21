@@ -23,3 +23,6 @@ cratedAt: Date
 updatedAt: Date
 
 
+21 Dec 2024
+-----------
+1. add password hashing in the database using mongoose pre hook
