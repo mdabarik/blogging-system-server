@@ -7,8 +7,6 @@ const userSchema = new Schema<TUser, UserModel>(
   {
     id: {
       type: String,
-      unique: true,
-      required: true,
     },
     name: {
       type: String,

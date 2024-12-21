@@ -3,7 +3,7 @@ import { userService } from './user.service';
 import sendResponse from '../../utils/sendResponse';
 import httpStatus from 'http-status';
 
-const createUser = async (req: Request, res: Response, next: NextFunction) => {
+const register = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const userData = req.body;
     console.log(req.body);
@@ -20,5 +20,5 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const UserController = {
-  createUser,
+  register,
 };
