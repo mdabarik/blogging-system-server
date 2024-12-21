@@ -1,6 +1,7 @@
 import { model, Schema } from 'mongoose';
+import { TUser } from './user.interface';
 
-const userSchema = new Schema(
+const userSchema = new Schema<TUser>(
   {
     name: {
       type: String,
@@ -16,6 +17,16 @@ const userSchema = new Schema(
     },
     password: {
       type: String,
+      required: true,
+      trim: true,
+    },
+    isBlocked: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+    role: {
+      type: String,
       enum: ['admin', 'user'],
       default: 'user',
     },
@@ -25,4 +36,4 @@ const userSchema = new Schema(
   },
 );
 
-export const User = model('User', userSchema);
+export const User = model<TUser>('User', userSchema);
